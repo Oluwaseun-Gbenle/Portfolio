@@ -1,38 +1,393 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html{
+   scroll-behavior: smooth;
 }
+#container{
+ background-color :#0f0f0f;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+#nav-bar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-end;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  height: 35px;
+  margin: 0;
+  padding-bottom: 10px;
+  background-color: #adff2f;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  text-align: right;
+  list-style-type: none;
+  opacity: 0.9;
+}
+
+.navLink{
+  padding: 8px 50px 0px 0px;
+  font-family: Arial;
+  font-size: 28px;
+  color: #2b4162;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navLink:hover {
   color: white;
+   text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  text-align:center;
+  line-height:15px;
+  height: 25%;
+  width: 100%;
+   height: 100vh;
+  width: 100%;
+background-image: linear-gradient(315deg,  rgba(43, 65, 98, 0.2),
+      rgba(18, 16, 14, 1.0)), 
+url("https://www.citylightscinemas.com/wp-content/uploads/2018/04/solo-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 80%;
+  background-attachment: fixed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+#text,
+#text2,
+#box{
+  text-align:center;
+
+}
+
+#text {
+  margin-bottom:30px;
+  font-size: 60px;
+  color: white;
+  font-weight:600;
+  font-family: Montserrat;
+}
+
+
+
+#text2 {
+  font-size: 30px;
+  color: #adff2f;
+  font-family:Montserrat;
+  padding-bottom: 20px;
+}
+
+
+
+
+#box{
+  color:white;
+  font-family:Montserrat;
+  font-size:15px;
+  border:1px solid #adff2f;
+ padding: 5px 8px 5px 8px;
+  text-decoration:none;
+  
+  
+}
+#box:hover{
+  background-color:white;
+  border:1px solid white;
+  color:green;
+}
+#text { 
+  animation: showup 2s;
+ 
+}
+
+#text2 {
+  animation: showup 4s;
+
+}
+
+#box{
+  animation: showup 6s;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+  50%{opacity:0;}
+    100% {opacity:1;}
+   
+}
+
+
+
+#about {
+  height: 100vh;
+  width:100%;
+  color: #fbf9f9;
+}
+.headerBar{
+  background-color:#92ee04;
+  width:100px;
+  height:2px;
+  margin:auto;
+  margin-top:-10px;
+}
+.subhead{
+ font-size: 45px; 
+  font-family: Arial;
+  padding-top: 50px;
+  font-weight: 500; 
+  text-align:center;
+}
+
+button{
+ float:right;
+  color:white;
+  background:none;
+  margin-right:180px;
+  margin-top:-55px;
+  height:30px;
+  cursor:pointer;
+  
+}
+#button:active{
+  transform: translateY(19px);
+}
+#parent{
+ display:flex;
+ flex-direction:row;
+}
+#left-box{
+  height:100%;
+  width:50%;
+
+}
+#right-box{
+  width:50%;
+   margin-top:20px;
+}
+#circle{
+height:200px;
+width:200px;
+margin-top:40px;
+margin-left:65%;
+  
+}
+#about-p{
+  width:80%;
+  margin-left:50%;
+   margin-top:100px;
+  font-family: Arial;
+  font-size:17px;
+}
+
+
+.image{
+width:100%;
+  border-radius:20%;
+  
+  
+}
+.about-p2{
+  margin-left:250px;
+  margin-top:15px;
+font-family: Arial;
+  font-size:18px;
+   line-height:35px;
+}
+
+
+#paragraph{
+  font-size:20px;
+}
+.fa-check{
+  margin-right: 10px;
+}
+#work{
+  height: 100%;
+  width:100%;
+    padding-bottom:120px;
+}
+#workFolder{
+  width:100%;
+ height: 80%;
+  display:grid;
+  justify-content:center;
+  grid-template-columns:25% 25% 25% ;
+  grid-template-rows: 300px 300px;
+  grid-gap: 30px 20px; 
+  padding-top: 30px;
+  padding-bottom:20px;
+}
+.reSize{
+  display:flex;
+object-fit:fill;
+  align-self:center;
+  width:100%;
+ height:300px;
+  
+ 
+}
+.work-p{
+text-align:center;
+  font-family:Arial;
+  font-weight:700;
+}
+#workLink{
+  height:100px;
+  width:50px;
+text-decoration:none;
+  border:none;
+ margin-left:47%;
+  margin-top:30px;
+font-weight:700;
+  font-size:20px;
+}
+#workLink:active{
+  transform: translateY(9px);
+}
+.fa-arrow-right{
+  margin-left:6px;
+}
+#contact{
+ background-color:#0c0737; 
+  color:white;
+  height:100vh;
+    width:100%;
+}
+.contact-p{
+  text-align:center;
+ font-style:italic;
+  font-size: 15px;
+    
+}
+#icons{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  margin-top:60px;
+}
+  .contact-a{
+  background-color:black;
+  width:50px;
+  height:50px;
+    margin-right: 20px;
+}
+.contact-a:hover {
+  transform: translateY(-10px);
+  
+}
+.media{
+ font-size:23px;
+  color: #eed7d7;
+ padding-top:15px;
+   margin-left:15px;
+}
+.contact-p2{
+  font-size:12px;
+  color:black;
+  text-align:center;
+}
+
+
+
+
+.flip-box {
+  background-color: inherit;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-box-back {
+  background-color: #0c0737;
+  height:300px;
+  color: white;
+  transform: rotateY(180deg);
+}
+.back-word{
+margin-top:35%; 
+}
+
+@media screen and (max-width: 650px){
+ #text {
+  font-size: 30px; 
   }
-  to {
-    transform: rotate(360deg);
+  #text2 {
+  font-size: 20px; 
   }
+  #parent{
+ flex-direction:column;
+}
+  #circle{
+    margin-left:100%;
+  }
+  .image{
+width:70%;
+}
+  
+  button{
+ float:right;
+  margin-right:8%;
+  margin-top:-55px;
+    width:80px;
+  height:40px;
+  
+}
+ #about-p{
+   margin-top:10px;
+  font-size:12px;
+}
+  #right-box{
+  width:100%;
+   margin-top:5px;
+}
+  .about-p2{
+      margin-top:5px;
+  margin-left:135px;
+  font-size:12px;
+   line-height:5px;
+}
+  #paragraph{
+  font-size:13px;
+}
+.fa-check{
+  margin-right: 10px;
+}
+   #work{
+    padding-bottom:320px;
+} 
+
+  #workFolder{
+  display:grid;
+  justify-content:center;
+  grid-template-columns:45% 45% ;
+  grid-template-rows: 300px 300px;
+}
+ #workLink{
+position:relative;
+   top:300px;
+   right:30px;
+}
 }
