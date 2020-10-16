@@ -1,10 +1,6 @@
 import React from 'react';
 import './App.css';
 
-let pictures = ["https://i.ibb.co/K2CnrnR/useful1.jpg", 
-"https://i.ibb.co/6gbH6kB/useful.jpg"
-]; 
-
 
 class App extends React.Component {
  constructor(props){
@@ -12,7 +8,7 @@ class App extends React.Component {
    this.state={
 darkModeOn: true,
      dropdown:false,
-      pic: "https://i.ibb.co/K2CnrnR/useful3.jpg"
+    
    }
  this.toggleDropDown=this.toggleDropDown.bind(this);
    this.toggleDarkMode=this.toggleDarkMode.bind(this);
@@ -28,13 +24,6 @@ toggleDropDown () {
   }));
 }
   
-  componentDidUpdate (prevProps) {
-   let picture = pictures[Math.floor(Math.random() * 2)];
-    setTimeout(() => {this.setState({
-      pic: picture
-    });
-   },2500);                 
-  }
   
   
   
@@ -50,20 +39,34 @@ toggleDropDown () {
       return(
       <div id="container">
     <div className="links">
-    <nav id="nav-bar">
-      <a className="navLink" href="#about"> About </a>
-      <a className="navLink" href="#work"> Work </a>
-      <a className="navLink" href="#contact"> Contact </a>
+    <nav role="navigation">
+     <div id="menuToggle">
+     <input type="checkbox" />
+     <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a className="navLink" href="#about"> <li>About</li> </a>
+      <a className="navLink" href="#work"><li>Work</li> </a>
+      <a className="navLink" href="#contact"> <li>Contact</li> </a>
+      </ul>
+      </div>
     </nav>
   </div>
-        
-      <main id="welcome-section">
-    <div id="image">  
+  
+       
+      <main  id="welcome-section">
+    <div id="texts"> 
       <h2 id="text">Hello, I'm Seun,</h2>
     <p id="text2">a web developer.</p>
-    <a id="box" onClick={this.toggleDropDown} href="#about">Know more</a></div>
+ <a id="box" onClick={this.toggleDropDown} href="#about"><span>Know more</span></a>
+  </div> 
+  <div id="frontimg">
+  <div id="img-cont"><img class="image-front" src="https://i.ibb.co/6gbH6kB/useful.jpg" alt="my-image"/></div>
+  </div>
   </main>
-        
+      
+       
          <section style={darkModeActive} id="about">
      <p className="subhead">About</p>
       { !this.state.darkModeOn? 
@@ -75,7 +78,7 @@ toggleDropDown () {
                     <div id="left-box">
      <div id="circle">
           
-        <img className="image" src={this.state.pic} alt="pic" border="0"/>
+        <img className="image" src="https://i.ibb.co/K2CnrnR/useful1.jpg" alt="pic" border="0"/>
      
       
       </div> 
@@ -86,7 +89,6 @@ toggleDropDown () {
       </p>
       
     </div>
-      
       <div id="right-box">
      <p style={green} id="paragraph"className="about-p2">I am proficient in:</p>
         <p className="about-p2"><i style={green}className="fa fa-check"></i>HTML</p>
@@ -94,6 +96,10 @@ toggleDropDown () {
         <p className="about-p2"><i style={green}className="fa fa-check"></i>Javascript</p>
         <p className="about-p2"><i style={green}className="fa fa-check"></i>React</p>
         <p className="about-p2"><i style={green}className="fa fa-check"></i>JQuery</p>
+        <p className="about-p2"><i style={green}className="fa fa-check"></i>Node.js</p>
+        <p className="about-p2"><i style={green}className="fa fa-check"></i>Express</p>
+        <p className="about-p2"><i style={green}className="fa fa-check"></i>Mongoose</p>
+        <p className="about-p2"><i style={green}className="fa fa-check"></i>Adobe photoshop</p>
       </div>
       
     </div>
@@ -208,7 +214,7 @@ toggleDropDown () {
             <a className="contact-a" href="https://twitter.com/sheywunG/" target="_blank" alt="twitter"><i className="media fa fa-twitter"></i></a>
             <a className="contact-a" href="https://instagram.com/sheywun.gee_/" target="_blank" alt="instagram"><i className="media fa fa-instagram"></i></a>
             <a className="contact-a" href="https://codepen.io/sheywungee/" target="_blank" alt="codepen"><i className="media fa fa-codepen"></i></a>
-            <a className="contact-a" href="mailto:gbenleseun2016@gmail.com" target="_blank" alt="email"><i className="media fa fa-envelope"></i></a>
+            <a className="contact-a" href="mailto:gbenleseun2016@gmail.com" target="_blank"rel="noopener noreferrer" alt="email"><i className="media fa fa-envelope"></i></a>
          </div>
        <p className="contact-p2">Oluwaseun Gbenle &copy; 2020</p>  
         </section>
@@ -219,19 +225,31 @@ toggleDropDown () {
     )}
    else{
      return( <div style={darkModeActive} id="container">
-    <div className="links">
-    <nav id="nav-bar">
-      <a className="navLink" onClick={this.toggleDropDown} href="#about"> About </a>
-      <a className="navLink" onClick={this.toggleDropDown} href="#work"> Work </a>
-      <a className="navLink" onClick={this.toggleDropDown} href="#contact"> Contact </a>
+  <div className="links">
+    <nav role="navigation">
+     <div id="menuToggle">
+     <input type="checkbox" />
+     <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a className="navLink"onClick={this.toggleDropDown}  href="#about"> <li>About</li> </a>
+      <a className="navLink" onClick={this.toggleDropDown} href="#work"><li>Work</li> </a>
+      <a className="navLink" onClick={this.toggleDropDown} href="#contact"> <li>Contact</li> </a>
+      </ul>
+      </div>
     </nav>
   </div>
         
       <main id="welcome-section">
-    <div id="image">  
+    <div id="texts"> 
       <h2 id="text">Hello, I'm Seun,</h2>
     <p id="text2">a web developer.</p>
-    <a id="box"   onClick={this.toggleDropDown} href="#about">Know more</a></div>
+  <a id="box" onClick={this.toggleDropDown} href="#about"><span>Know more</span></a>
+  </div> 
+  <div id="frontimg">
+    <div id="img-cont"><img class="image-front" src="https://i.ibb.co/6gbH6kB/useful.jpg" alt="my-image"/></div>
+  </div>
   </main>
          </div>
          )
