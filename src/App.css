@@ -168,6 +168,7 @@ background-image:linear-gradient(315deg,  rgba(43, 65, 98, 0.2),
 rgba(18, 16, 14, 1.0));
 
 }
+
 #frontimg{
   width:50%; 
   display:flex;
@@ -194,6 +195,7 @@ width:100%;
 #text {
   margin-bottom:30px;
   font-size: 60px;
+  line-height:55px;
   color: white;
   font-weight:600;
   font-family: Montserrat;
@@ -268,8 +270,9 @@ transition: all 0.5s;
   right: 0;
 }
 
+/*about */
 #about {
-  height: 100vh;
+  height: 100%;
   width:100%;
   color: #fbf9f9;
 }
@@ -313,6 +316,7 @@ button{
 #right-box{
   width:50%;
    margin-top:20px;
+   padding-bottom:100px;
 }
 #circle{
 height:200px;
@@ -351,6 +355,9 @@ font-family: Arial;
 .fa-check{
   margin-right: 10px;
 }
+
+
+/*work */
 #work{
   height: 100%;
   width:100%;
@@ -358,10 +365,9 @@ font-family: Arial;
 }
 #workFolder{
   width:100%;
- height: 80%;
   display:grid;
   justify-content:center;
-  grid-template-columns:25% 25% 25% ;
+  grid-template-columns:27% 27% 27% ;
   grid-template-rows: 300px 300px;
   grid-gap: 30px 20px; 
   padding-top: 30px;
@@ -397,6 +403,8 @@ font-weight:700;
 .fa-arrow-right{
   margin-left:6px;
 }
+
+/*contact*/
 #contact{
  background-color:#121114; 
   color:white;
@@ -427,13 +435,13 @@ font-weight:700;
 }
 .media{
  font-size:23px;
-  color: #eed7d7;
+  color: white;
  padding-top:15px;
    margin-left:15px;
 }
 .contact-p2{
   font-size:12px;
-  color:rgb(231, 227, 227);
+  color:white;
   text-align:center;
 }
 
@@ -470,7 +478,31 @@ font-weight:700;
 margin-top:35%; 
 }
 
+
+@media screen and (max-width: 950px){
+  #workFolder{
+    grid-template-columns:45% 45% ;
+    grid-template-rows: repeat(3, 300px);
+  }
+}
 @media screen and (max-width: 650px){
+    #frontimg{
+      width:0; 
+    }
+    #texts {
+      width: 100%;
+      height:inherit;
+      padding-left:30%;
+    background-image:linear-gradient(315deg,  rgba(43, 65, 98, 0.4),
+    rgba(18, 16, 14, 0.9)),url("https://i.ibb.co/6gbH6kB/useful.jpg");
+    background-repeat: no-repeat;
+   background-size: cover;
+    }
+  
+.subhead{
+  font-size: 30px;
+}
+
  #text {
   font-size: 26px; 
   }
@@ -484,9 +516,9 @@ margin-top:35%;
  padding: 3px 5px 3px 5px;
   
 }
- 
+
   .image{
-width:55%;
+width:60%;
 }
   
   button{
@@ -497,22 +529,45 @@ width:55%;
   height:40px;
   
 }
+#about{
+  height:100%;
+}
  #about-p{
    margin-top:0px;
   font-size:12px;
 }
+#parent{
+  display:flex;
+  flex-direction:column;
+ }
   #right-box{
   width:100%;
-   margin-top:25px;
+   display:flex;
+   flex-direction: column;
+   padding-left: 30%;
+   padding-bottom: 20px;
+ margin-top:25px;  
 }
-  .about-p2{
-      margin-top:25px;
+#left-box{
+  width:75%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+ .about-p2{
+  margin-top:25px;
   margin-left:80px;
   font-size:12px;
-   line-height:10px;
+   line-height:15px;
 }
   #paragraph{
   font-size:13px;
+}
+
+.headerBar{
+  width:50px;
+  margin-top:-5px;
 }
 .fa-check{
   margin-right: 0px;
@@ -522,10 +577,8 @@ width:55%;
 } 
 
   #workFolder{
-  display:grid;
-  justify-content:center;
-  grid-template-columns:45% 45% ;
-  grid-template-rows: 300px 300px;
+  grid-template-columns:75%;
+  grid-template-rows: repeat(6, 300px);
 }
  #workLink{
 position:relative;
@@ -533,3 +586,5 @@ position:relative;
    right:30px;
 }
 }
+
+
