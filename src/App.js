@@ -55,14 +55,13 @@ toggleDropDown () {
   </div>
   
        
-      <main  id="welcome-section">
+  <main id="welcome-section">
     <div id="texts"> 
       <h2 id="text">Hello, I'm Seun,</h2>
     <p id="text2">a web developer.</p>
- <a id="box" onClick={this.toggleDropDown} href="#about"><span>Know more</span></a>
-  </div> 
-  <div id="frontimg">
-  <div id="img-cont"><img class="image-front" src="https://i.ibb.co/6gbH6kB/useful.jpg" alt="my-image"/></div>
+  <div id="box">
+  <a id="box-link" onClick={this.toggleDropDown} href="#about"><span>Know more</span></a>
+  </div>
   </div>
   </main>
       
@@ -245,10 +244,9 @@ toggleDropDown () {
     <div id="texts"> 
       <h2 id="text">Hello, I'm Seun,</h2>
     <p id="text2">a web developer.</p>
-  <a id="box" onClick={this.toggleDropDown} href="#about"><span>Know more</span></a>
-  </div> 
-  <div id="frontimg">
-    <div id="img-cont"><img class="image-front" src="https://i.ibb.co/6gbH6kB/useful.jpg" alt="my-image"/></div>
+  <div id="box">
+  <a id="box-link" onClick={this.toggleDropDown} href="#about"><span>Know more</span></a>
+  </div>
   </div>
   </main>
          </div>

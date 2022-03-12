@@ -26,14 +26,14 @@ html{
 #menuToggle a
 {
   text-decoration: none;
-  color: #232323;
+  color: #adff2f;
   font-family:Montserrat;
   transition: color 0.3s ease;
 }
 
 #menuToggle a:hover
 {
-  color: #95ee0f;
+  color: white;
 }
 
 
@@ -65,7 +65,7 @@ html{
   margin-bottom: 5px;
   position: relative;
   
-  background: #adff2f;;
+  background: #adff2f;
   border-radius: 3px;
   
   z-index: 1;
@@ -95,7 +95,7 @@ html{
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #adff2f;
 }
 
 /*
@@ -122,12 +122,13 @@ html{
 #menu
 {
   position: absolute;
-  width: 200px;
+  width: 120px;
   margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
+  padding: 40px;
+  padding-top: 110px;
   
-  background: #ededed;
+  background: linear-gradient( rgba(43, 65, 98, 0.7),
+  rgba(18, 16, 14, 0.8));
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -141,7 +142,7 @@ html{
 #menu li
 {
   padding: 10px 0;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 /*
@@ -156,6 +157,11 @@ html{
   display:flex;
   width:100%;
   height: 100vh;
+  background-image:linear-gradient( rgba(43, 65, 98, 0.7),
+  rgba(18, 16, 14, 1)),url("https://media.istockphoto.com/photos/programming-source-code-abstract-background-picture-id1047259374?k=20&m=1047259374&s=612x612&w=0&h=pt3XbBvrmiYgoYmVzsaUeXtV8vw_jJI9Ly8P7AL6Qig=");
+background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
 }
 #texts {
   display:flex;
@@ -163,32 +169,15 @@ html{
   justify-content:center;
   padding-left:10%;
   line-height:15px;
-  width: 60%;
-background-image:linear-gradient(315deg,  rgba(43, 65, 98, 0.2),
-rgba(18, 16, 14, 1.0));
+  width: 100%;
 
 }
 
-#frontimg{
-  width:50%; 
-  display:flex;
-  align-items:center;
-}
-#img-cont{
-height:100%; 
-width:100%;
-}
-.image-front{
-  display:flex;
-    object-fit:fill;
-    width:100%;
-    height: 100%;
   
-}
 #text,
 #text2,
 #box{
-  text-align:left;
+  text-align:center;
 
 }
 
@@ -197,7 +186,7 @@ width:100%;
   font-size: 60px;
   line-height:55px;
   color: white;
-  font-weight:600;
+  font-weight:500;
   font-family: Montserrat;
 }
 
@@ -214,17 +203,21 @@ width:100%;
 
 
 #box{
-  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  Padding:0 45% 0 45%;
   font-family:Montserrat;
   font-size:15px;
-  border:1px solid #adff2f;
-  max-width:103px;
- padding: 5px 8px 5px 8px;
-text-decoration:none;
 transition: all 0.5s;
   
 }
-
+#box-link{
+  border:1px solid #adff2f;
+  padding: 5px 8px 5px 8px;
+  text-decoration:none;
+  color:white;
+}
 #text { 
   animation: showup 2s;
  
@@ -486,18 +479,6 @@ margin-top:35%;
   }
 }
 @media screen and (max-width: 650px){
-    #frontimg{
-      width:0; 
-    }
-    #texts {
-      width: 100%;
-      height:inherit;
-      padding-left:30%;
-    background-image:linear-gradient(315deg,  rgba(43, 65, 98, 0.4),
-    rgba(18, 16, 14, 0.9)),url("https://i.ibb.co/6gbH6kB/useful.jpg");
-    background-repeat: no-repeat;
-   background-size: cover;
-    }
   
 .subhead{
   font-size: 30px;
@@ -512,8 +493,7 @@ margin-top:35%;
   
 #box{
   font-size:10px;
-  max-width:75px;
- padding: 3px 5px 3px 5px;
+ 
   
 }
 
